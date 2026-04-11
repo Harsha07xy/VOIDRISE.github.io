@@ -1,1 +1,190 @@
-My App Developer Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V∅IDR↑SE.</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #080808;
+    color: #EEEEF5;
+    font-family: 'Share Tech Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(123,47,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(123,47,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .brand {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: clamp(36px, 12vw, 88px);
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .void-o {
+    color: transparent;
+    -webkit-text-stroke: 3px #7B2FFF;
+    filter: drop-shadow(0 0 14px #7B2FFF88);
+    animation: glow 3s ease-in-out infinite;
+  }
+  @keyframes glow {
+    0%,100% { filter: drop-shadow(0 0 14px #7B2FFF88); }
+    50%      { filter: drop-shadow(0 0 28px #7B2FFFcc); }
+  }
+
+  .arrow {
+    color: #00FFD1;
+    -webkit-text-fill-color: #00FFD1;
+    display: inline-block;
+    animation: bounce 1.6s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+
+  .rise { color: #00FFD1; -webkit-text-fill-color: #00FFD1; }
+  .dot  { color: #00FFD1; -webkit-text-fill-color: #00FFD1; }
+
+  .tagline {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 56px;
+    animation: fadeUp 0.9s ease both 0.15s;
+  }
+
+  .divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(90deg, transparent, #7B2FFF, transparent);
+    margin: 0 auto 48px;
+    animation: fadeUp 0.9s ease both 0.2s;
+  }
+
+  .app-card {
+    background: #0F0F14;
+    border: 1px solid #1a1a28;
+    border-radius: 16px;
+    padding: 28px 36px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.25s, transform 0.25s;
+    animation: fadeUp 1s ease both 0.3s;
+  }
+  .app-card:hover {
+    border-color: #00FFD1;
+    transform: translateY(-3px);
+  }
+
+  .app-emoji { font-size: 30px; margin-bottom: 10px; display: block; }
+
+  .app-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    color: #EEEEF5;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .app-desc { font-size: 11px; color: #555; letter-spacing: 2px; }
+
+  .play-badge {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #00FFD1;
+    border: 1px solid rgba(0,255,209,0.3);
+    padding: 5px 14px;
+    border-radius: 20px;
+  }
+
+  .soon-card {
+    background: #0F0F14;
+    border: 1px dashed #1a1a28;
+    border-radius: 16px;
+    padding: 20px 36px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 52px;
+    animation: fadeUp 1s ease both 0.4s;
+  }
+  .soon-text { font-size: 11px; letter-spacing: 3px; color: #2a2a2a; text-transform: uppercase; }
+
+  .email-link {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s;
+    animation: fadeUp 1s ease both 0.5s;
+    display: block;
+    margin-bottom: 36px;
+  }
+  .email-link:hover { color: #7B2FFF; }
+
+  .footer {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #1e1e1e;
+    text-transform: uppercase;
+    animation: fadeUp 1s ease both 0.6s;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+  <h1 class="brand">
+    V<span class="void-o">∅</span>IDR<span class="arrow">↑</span><span class="rise">SE</span><span class="dot">.</span>
+  </h1>
+
+  <p class="tagline">Rise from nothing</p>
+
+  <div class="divider"></div>
+
+  <a class="app-card" href="https://play.google.com/store/apps/details?id=com.cs_boiii.one_stroke" target="_blank" rel="noopener">
+    <span class="app-emoji">🧩</span>
+    <div class="app-name">One Stroke</div>
+    <div class="app-desc">Puzzle · Focus · Brain Training</div>
+    <span class="play-badge">▶ GET IT ON GOOGLE PLAY</span>
+  </a>
+
+  <div class="soon-card">
+    <p class="soon-text">// More apps coming soon</p>
+  </div>
+
+  <a class="email-link" href="mailto:help.teamharsha@gmail.com">help.teamharsha@gmail.com</a>
+
+  <p class="footer">© 2026 V∅IDR↑SE. All rights reserved.</p>
+
+</body>
+</html>
